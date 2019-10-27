@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/quicksand/v19/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkP8o58a-wg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Dancing Script';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Dancing Script Regular'), local('DancingScript-Regular'), url(https://fonts.gstatic.com/s/dancingscript/v11/If2RXTr6YS-zF4S-kcSWSVi_szLgiuE.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+:root {
+    --main-color: #50394c;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: whitesmoke;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+header {
+/* properties, if an child element*/
+    height: 10vh;
+    width: 100%;
+/*if a parent*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.logo {
+    align-self: center;
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 1.5rem;
+    margin-left: 4rem;
+}
+
+h2 {
+    position: relative;
+
+}
+
+h2::after {
+    content: url("https://image.flaticon.com/icons/svg/262/262084.svg");
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    left: -50px;
+
+}
+nav ul {
+/* properties, if an child element*/
+    list-style: none;
+    height: 100%;
+/*if a parent*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1rem;
+    text-align: center;
+
+}
+
+nav ul li {
+    font-size: 1.2rem;
+    padding: 10px;
+    align-self: end;
+    border-bottom: 2px solid var(--main-color);
+}
+
+.banner {
+    width: 100%;
+    height: 70vh;
+    background: whitesmoke url("https://images.pexels.com/photos/425169/pexels-photo-425169.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260") no-repeat fixed;
+    background-size: cover;  
+    font-size: 2.3rem;
+    text-align: center;
+   
+}
+
+.banner h1 {
+    color: black;
+    margin-top: 10%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+}
+
+
+.aboutMe {
+    height: 50vh;
+    width: 100%;
+}
+
+/*.wrapper, .banner, nav, .aboutMe, footer
+    border: 2px solid black;
+*/
+
