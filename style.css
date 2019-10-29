@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Quicksand';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 400, 600;
     src: url(https://fonts.gstatic.com/s/quicksand/v19/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkP8o58a-wg.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
@@ -9,7 +9,7 @@
 @font-face {
     font-family: 'Dancing Script';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 400, 600;
     font-display: swap;
     src: local('Dancing Script Regular'), local('DancingScript-Regular'), url(https://fonts.gstatic.com/s/dancingscript/v11/If2RXTr6YS-zF4S-kcSWSVi_szLgiuE.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
@@ -18,7 +18,7 @@
     --main-color: #3b4834;
     --main-color-light: #6c7355;
     --transparent-white: rgba(255, 255, 255, 0.5);
-    --main-color-tranparent: #c1c9cd;
+    --main-color-gray: #c1c9cd;
 
 
 
@@ -50,13 +50,12 @@ body {
 }
 
 header {
-/* properties, if an child element*/
     height: 10vh;
     width: 100%;
-/*if a parent*/
     display: grid;
     grid-template-columns: 1fr 1fr;
-
+    position: fixed;
+    background-color: whitesmoke;
 }
 
 ul {
@@ -83,9 +82,7 @@ h2::after {
 
 }
 nav ul {
-/* properties, if an child element*/
     height: 100%;
-/*if a parent*/
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 1rem;
@@ -101,11 +98,11 @@ nav ul li {
 }
 
 .banner {
+    margin-top: 10vh;
     width: 100%;
     height: 70vh;
-    background: whitesmoke url("bg-pic.jpg") no-repeat fixed;
+    background: whitesmoke url("img/bg-pic.jpg") no-repeat fixed;
     background-size: cover;  
-    font-size: 2.8rem;
     text-align: center;
 }
 
@@ -113,23 +110,34 @@ nav ul li {
     color: black;
     margin-top: 10%;
     padding: 1rem;
+    font-size: 4rem;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    color: var(--main-color-light);
 }
 
 
-.about-me, .skills {
+/* ABOUT ME section start*/
+.about-me, 
+.skills, 
+.contact-form {
     margin: 5%;
     height: 40vh;
     width: 90%;
     display: flex;
     background: #fff;
     box-shadow: 2px 5px 10px #ddd;
-    
 }
 
 .personal-details, .description {
     padding: 1.8rem;
     font-size: 1.2rem;
+}
 
+.avatar {
+    min-width: 20%;
 }
 
 .avatar img {
@@ -141,8 +149,7 @@ nav ul li {
     color: var(--main-color);
     font-weight: bold;
     list-style: none;
-    background: var(--main-color-tranparent);
-
+    background: var(--main-color-gray);
 }
 
 .personal-details li {
@@ -151,12 +158,14 @@ nav ul li {
 
 .personal-details li a {
     padding-left: .7rem;
-    color: black;
+    font-weight: 400;
+    color: #000;
 }
 
 .description {
     border-left: 2px solid var(--main-color-light);
 }
+
 .description p {
     padding: 1rem;
     text-align: justify;
@@ -166,25 +175,91 @@ h3 {
     color: var(--main-color);
     font-size: 1.5rem;
 }
+/*ABOUT ME section end*/
 
+
+/* SKILLS section start*/
 .skills {
     margin: 0 5%;
-
-}
-.photo-gallery {
     display: grid;
-    
-
+    grid-template-columns: repeat(3, 1fr);
 }
+.skill-1, .skill-2, .skill-3 {
+    margin: 4%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.skill-1, .skill-2 {
+    border-right: 4px dotted var(--main-color-light);
+}
+img {
+    height: 25vh;
+}
+/*SKILLS section end*/
+
+/*PHOTOS section start*/
+.photo-gallery {
+    margin-top: 10vh;
+    background-color: #fff;
+    height: 65vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5vh repeat(2, 1fr);
+}
+
+.portfolio-title {
+    grid-column: span 3;
+    text-align: center;
+    background-color: whitesmoke;
+}
+.pic1 {
+    background: url(img/pic1.jpg) no-repeat;
+    background-size: cover;
+}
+
+.pic2 {
+    background: url(img/pic2.jpg) no-repeat;
+    background-size: cover;
+}
+
+.pic3 {
+    grid-row: span 2;
+    background: url(img/pic3.jpg) no-repeat;
+    background-size: cover;
+}
+
+.pic4 {
+    grid-column: span 2;
+    background: url(img/pic4.jpg) no-repeat;
+    background-size: cover;
+}
+/*PHOTOS section end*/
+
 
 .contact-form {
-
+    margin-top: 10vh;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
 }
 
-
+.contact-info {
+    background-color: var(--main-color-gray);
+    padding: 10%;
+}
+form {
+    grid-row: span 2;
+}
 footer {
     width: 100%;
-    height: 20vw;
+    height: 10vw;
+    text-align: center;
+    padding: 3rem;
 }
 
 
@@ -196,7 +271,7 @@ footer {
 }
 
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
+    box-shadow: inset 0 0 5px var(--main-color-gray); 
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
