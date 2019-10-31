@@ -6,47 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" type="image/png" href="brackets.png">
-
-    <title>Sophia Abbott || Web Designer</title>
+    <title>Paulina Bodio || Web Dev</title>
 </head>
 <body>
     <div class = "wrapper">
-    <!--Header start-->
         <header>
             <div class="logo">
-                <h2>Sophia Abbott</h2>
+                <a href="index.html"><h2>Paulina Bodio</h2></a>
             </div>
-        <!--top navigation start-->
             <nav>
                 <ul>
-                    <li>. about me</li>
-                    <li>. skills</li>
-                    <li>. portfolio</li>
-                    <li>. contact</li>
+                    <li><a href="#AboutMe">. about me</a></li>
+                    <li><a href="#Skills">. skills</a></li>
+                    <li><a href="#Portfolio">. portfolio</a></li>
+                    <li><a href="#ContactMe">. contact me</a></li>
                 </ul>
-        <!--top navigation end-->
             </nav>
         </header>
-    <!--Header end-->
         <section class = "banner">
                 <h1>. welcome!</h1>
-                <p>my name is Sophie</p>
-                <img src="img/github.png" alt="github profile">
-                <img src="img/linkedin.png" alt="linkedin profile">
-                <img src="img/facebook.png" alt="facebook profile">
-                <img src="img/instagram.png" alt="instagram profile">
+                <p>my name is Paulina</p>
+                <a href="https://github.com/PaulinaBodio" target="_blank"><img src="img/github.png" alt="github profile"></a>
+                <a href="https://pl.linkedin.com" target="_blank"><img src="img/linkedin.png" alt="linkedin profile"></a>
+                <a href="https://www.facebook.com" target="_blank"><img src="img/facebook.png" alt="facebook profile"></a>
+                <a href="https://www.instagram.com/?hl=pl" target="_blank"><img src="img/instagram.png" alt="instagram profile"></a>
         </section>
-        <section class="about-me">
+        <section class="about-me" id="AboutMe">
             <div class="avatar">
-               <img src="img/avatar.jpg" alt="This is me">
+                <img src="img/avatar.jpg" alt="This is me">
             </div>
             <div class = "personal-details">
                 <ul>
-                    <li>. full name:     <a>Sophia Abbott</a></li>
-                    <li>. age:           <a>27</a></li>
-                    <li>. profile:       <a>Web Designer</a></li>
-                    <li>. telephone:     <a>123 456 789</a></li>
-                    <li>. e-mail:        <a>abbotts@gmail.com</a></li>
+                    <li>. full name:  <a>Paulina Bodio</a></li>
+                    <li>. age:        <a>27</a></li>
+                    <li>. profile:    <a>Web Dev</a></li>
+                    <li>. telephone:  <a>123 456 789</a></li>
+                    <li>. e-mail:     <a>example@gmail.com</a></li>
                 </ul>
             </div>
             <div class = "description">
@@ -54,8 +49,8 @@
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae eum distinctio aspernatur nostrum sed tempora officia? Vero numquam inventore aperiam deleniti itaque magni voluptatem sit facilis. Laudantium eveniet molestiae aspernatur.</p>
             </div>
         </section>
-        <h3>. skills</h3>
-        <section class="skills">
+            <h3>. skills</h3>
+        <section class="skills" id="Skills">
                 <div class="skill-1">
                     <img src="img/UX-icon.png" alt="UX Icon">
                     <h4>UX/UI</h4>
@@ -72,41 +67,36 @@
                     <p>php, node.js</p>
                 </div>    
         </section>
-        <section class="photo-gallery">
+        <section class="photo-gallery" id="Portfolio">
             <div class ="portfolio-title">
                 <h3>. portfolio</h3>
             </div>
-            <div class="pic1">
-            </div>
-            <div class="pic2">
-            </div>
-            <div class="pic3">
-            </div>
-            <div class="pic4">
-            </div>
+            <div class="pic1" class="picture"></div>
+            <div class="pic2"></div>
+            <div class="pic3"></div>
+            <div class="pic4"></div>
         </section>
-        <section class="contact-form">
+        <section class="contact-form" id="ContactMe">
             <div class="contact-info">
                 <div class="top">
                     <img src = "img/mail.png">
-                        <p class = "mail-icon">Please describe your question.</p>
-                        <p>Send me a message and I will answer you as soon as possible!</p>
+                    <p class = "mail-icon">Please describe your question.</p>
+                    <p>Send me a message and I will answer you as soon as possible!</p>
                 </div>
-               <div class="bottom">
-                   <img src="img/github.png" alt="github profile">
-                   <img src="img/linkedin.png" alt="linkedin profile">
-                   <img src="img/facebook.png" alt="facebook profile">
-                   <img src="img/instagram.png" alt="instagram profile">
-                    <p>Designer</p>
+                <div class="bottom">
+                    <a href="https://github.com/PaulinaBodio" target="_blank"><img src="img/github.png" alt="github profile"></a>
+                    <a href="https://pl.linkedin.com" target="_blank"><img src="img/linkedin.png" alt="linkedin profile"></a>
+                    <a href="https://www.facebook.com" target="_blank"><img src="img/facebook.png" alt="facebook profile"></a>
+                    <a href="https://www.instagram.com/?hl=pl" target="_blank"><img src="img/instagram.png" alt="instagram profile"></a>
+                    <p>Web Dev</p>
                     <p>Poland, Wroclaw</p>
                     <p>ul. Teczowa 12/3 50-000</p>
                     <p>+48 123 456 789</p>
-                    <p>abbotts@gmail.com</p>
-               </div>
-                
+                    <p>example@gmail.com</p>
+                </div>
             </div>
             <form>
-                <h3>Let's start!</h3>
+                <h3>Feel free to contact me!</h3>
                 <label>
                     <input type="text" placeholder = ". name">
                 </label>
@@ -120,9 +110,7 @@
                     <input id = "textarea" type="textarea" placeholder = ". your message">
                 </label>
                 <button>. send </button>
-
             </form>
-
         </section>
 
         <footer>
