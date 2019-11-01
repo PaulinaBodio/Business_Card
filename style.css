@@ -355,9 +355,7 @@ footer {
 }
 
 
-
 /* CUSTOM SCROLLBAR*/
-
 ::-webkit-scrollbar {
     width: 10px;
 }
