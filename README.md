@@ -1,7 +1,10 @@
 # Portfolio
 ## First Project on CodersCamp
 
-Hello!
+Hi there!
 
-This is my first project as a newbie on FrontEnd.
-Hope you'll like it!
+This is my first simple project created during the CodersCamp programming course.
+
+## Technologies
+- HTML
+- CSS
