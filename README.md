@@ -5,6 +5,10 @@
 #### This is my first simple project created during the CodersCamp programming course.
 #### [. click here to check out a live demo](https://paulinabodio.github.io/CodersCamp-Portfolio/)
 
+## Screenshots
+![Screenshot](/img/screenshot.png)
+
+
 ## Technologies
 * HTML
 * CSS
